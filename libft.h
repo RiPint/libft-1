@@ -38,7 +38,7 @@ int	ft_strcmp(const char *s1, const char *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strnew(size_t size);
 int	ft_tolower(int c);
-int	isalpha(int c);
+int	ft_isalpha(int c);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	ft_putendl(char const *s);
 char	*ft_strcpy(char *dest, const char *src);
@@ -50,7 +50,7 @@ void	ft_putnbr(int n);
 void	ft_strdel(char **as);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strrchr(const char *s, int c);
-int	isdigit(int c);
+int	ft_isdigit(int c);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	ft_putstr(char const *s);
 char	*ft_strdup(const char *s1);
@@ -58,5 +58,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strxdup(char const *s, size_t x, size_t y);
 size_t	ft_line_count(char const *s, char c);
 char	**ft_strsplit(char const *s, char c);
+int	ft_toupper(int c);
 
 #endif
