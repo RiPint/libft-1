@@ -13,8 +13,11 @@ char	*ft_strmap(char const *s, char (*f)(char))
   if (str)
     {
       while (s[i])
-	str[i++] = f(s[i]);
-	  str[i] = '\0';
+	{
+	  str[i] = f(s[i]);
+	  i++;
+	}
+      str[i] = '\0';
     }
   return (str);
 }

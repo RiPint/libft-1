@@ -17,12 +17,3 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
     s1[size] = '\0';
   return (s1);
 }
-
-int	main(void)
-{
-  char a[] = "abcdef";
-  char z[] = "ghijkl";
-  char *str;
-  str = ft_strncat(a, z, 3);
-  printf("%s\n", str);
-}
