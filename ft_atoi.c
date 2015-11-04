@@ -6,7 +6,7 @@ int	ft_atoi(const char *str)
   int sign;
   int result;
 
-  result = 0;
+ result = 0;
   sign = 1;
   i = 0;
   while (str[i] == ' ' || str[i] == '\t' ||
@@ -16,14 +16,14 @@ int	ft_atoi(const char *str)
   if (str[i] == '-' || str[i] == '+')
     {
       if (str[i] == '-')
-	sign = -sign;
-      i++;
+	  sign = -sign;
+	i++;
     }
   while (str[i] >= '0' && str[i] <= '9')
     {
-      result = str[i] + 48;
       result *= 10;
+      result += str[i] - 48;
       i++;
     }
-  return (result);
+  return (result * sign);
 }
