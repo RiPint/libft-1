@@ -10,7 +10,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
   if (*(unsigned char *) s == '\0')
     return (NULL); 
   else if (n == 0)
-    return ((unsigned char *)s);
+    return ((void *)s);
   else 
     return (NULL);
 }
