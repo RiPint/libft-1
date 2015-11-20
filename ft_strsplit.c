@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include "libft.h"
+#include <string.h>
 
 char	**ft_strsplit(char const *s, char c)
 {
@@ -14,7 +15,7 @@ char	**ft_strsplit(char const *s, char c)
   y = 0;
   i = 0;
   j = ft_line_count(s, c);
-  if (!(str = (char **)malloc(sizeof(char *) * j)))
+  if (!(str = (char **)malloc(sizeof(char *) * j + 1)))
     return (NULL);
   while (i < j)
     {
@@ -25,7 +26,7 @@ char	**ft_strsplit(char const *s, char c)
 	  y++;
       str[i] = ft_strxdup(s, x, y);
       i++;
-      while (s[y] == c)
+      while (s[y] == c && s[y])
 	y++;
     }
   return (str);
