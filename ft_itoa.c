@@ -20,7 +20,10 @@ char	*ft_itoa(int n)
       i = n;
   while (i)
     {
-      str[ft_lenbr(i)] = (i % 10) + 48;
+      if (n >= 0)
+	str[ft_lenbr(i) - 1] = (i % 10) + 48;
+      else
+	str[ft_lenbr(i)] = (i % 10) + 48;
       i = i / 10;
       j++;
     }
