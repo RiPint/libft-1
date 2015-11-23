@@ -3,9 +3,13 @@
 int	ft_strcmp(const char *s1, const char *s2)
 {
   size_t i;
+  unsigned char *s3;
+  unsigned char *s4;
 
+  s3 = (unsigned char *)s1;
+  s4 = (unsigned char *)s2;
   i = 0;
-  while (s1[i] && s2[i])
-    i++;
-  return (s1[i] - s2[i]);
+  while (s3[i] == s4[i] && s3[i] && s4[i])
+      i++;
+  return (s3[i] - s4[i]);
 }
