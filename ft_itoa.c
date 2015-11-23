@@ -11,6 +11,8 @@ char	*ft_itoa(int n)
   i = 0;
   if (!(str = (char *)malloc(sizeof(char) * ft_lenbr(n))))
     return (NULL);
+  if (n == -2147483648)
+    return ("-2147483648");
   if (n < 0)
     {
       i = -n;
