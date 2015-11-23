@@ -11,5 +11,5 @@ int	ft_strcmp(const char *s1, const char *s2)
   i = 0;
   while (s3[i] == s4[i] && s3[i] && s4[i])
       i++;
-  return (s3[i] - s4[i]);
+  return ((int)s3[i] - (int)s4[i]);
 }
