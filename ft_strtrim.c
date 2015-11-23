@@ -13,11 +13,12 @@ char	*ft_strtrim(char const *s)
   j = 0;
   if (!(str = (char *)malloc(sizeof(char) * ft_strlen(s))))
     return (NULL);
-
+  if (s[i] == '\0')
+    return ("");
   while ((s[i] == ' ' || s[i] == '\t' || s[i] == '\n') && s[i])
     i++;
   j = ft_strlen(s) - 1;
-  while ((s[j] == ' ' || s[j] == '\t' || s[j] == '\n'))
+  while ((s[j] == ' ' || s[j] == '\t' || s[j] == '\n') && s[i])
     j--;
   while (i <= j)
     str[k++] = s[i++];
