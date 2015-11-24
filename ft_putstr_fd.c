@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:42:30 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/23 19:42:32 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/24 17:34:09 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-  write(fd, s, ft_strlen(s));
+	write(fd, s, ft_strlen(s));
 }

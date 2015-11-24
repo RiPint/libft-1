@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:44:43 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/23 19:44:45 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/24 17:34:47 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-  size_t i;
-  unsigned char *s3;
-  unsigned char *s4;
+	size_t i;
+	unsigned char *s3;
+	unsigned char *s4;
 
-  s3 = (unsigned char *)s1;
-  s4 = (unsigned char *)s2;
-  i = 0;
-  while (s3[i] == s4[i] && s3[i] && s4[i])
-      i++;
-  return ((int)s3[i] - (int)s4[i]);
+	s3 = (unsigned char *)s1;
+	s4 = (unsigned char *)s2;
+	i = 0;
+	while (s3[i] == s4[i] && s3[i] && s4[i])
+		i++;
+	return ((int)s3[i] - (int)s4[i]);
 }

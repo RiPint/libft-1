@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:49:28 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/23 19:49:30 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/24 17:40:12 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,29 @@
 
 char    *ft_strstr(const char *s1, const char *s2)
 {
-  size_t i;
-  size_t j;
-  i = 0;
-  j = 0;
+	size_t i;
+	size_t j;
+	i = 0;
+	j = 0;
 
-  if (s2[i] == '\0')
-    return ((char *)s1);
-  while (s1[i])
-    {
-      if (s1[i] == s2[j])
+	if (s2[i] == '\0')
+		return ((char *)s1);
+	while (s1[i])
 	{
-          while (s1[i] == s2[j] && s1[i] && s2[j])
-	    {
-	      i++;
-	      j++;
-	    }
-	  if (s2[j] == '\0')
-	    return ((char *)&s1[i - ft_strlen(s2)]);
-	  i = i - j + 1;
-	  j = 0;
+		if (s1[i] == s2[j])
+		{
+			while (s1[i] == s2[j] && s1[i] && s2[j])
+			{
+				i++;
+				j++;
+			}
+			if (s2[j] == '\0')
+				return ((char *)&s1[i - ft_strlen(s2)]);
+			i = i - j + 1;
+			j = 0;
+		}
+		else
+			i++;
 	}
-      else
-        i++;
-    }
-  return (NULL);
+	return (NULL);
 }

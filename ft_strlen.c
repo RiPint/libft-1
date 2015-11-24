@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:46:45 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/23 19:46:47 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/24 17:37:54 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 size_t	ft_strlen(const char *s)
 {
-  size_t i;
+	size_t i;
 
-  i = 0;
-  if (s[i])
-    while (s[i])
-      i++;
-  return (i);
+	i = 0;
+	if (s[i])
+		while (s[i])
+			i++;
+	return (i);
 }

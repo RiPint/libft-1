@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:50:03 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/23 19:50:05 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/24 17:40:46 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 
 char	*ft_strxdup(char const *s, size_t x, size_t y)
 {
-  size_t i;
-  char *str;
+	size_t i;
+	char *str;
 
-  i = 0;
-  if (!(str = (char *)malloc(sizeof(char) * y - x + 1)))
-    return (NULL);
-  while (x < y)
-    {
-    str[i] = s[x];
-    i++;
-    x++;
-    }
-  str[i] = '\0';
-  return (str);
+	i = 0;
+	if (!(str = (char *)malloc(sizeof(char) * y - x + 1)))
+		return (NULL);
+	while (x < y)
+	{
+		str[i] = s[x];
+		i++;
+		x++;
+	}
+	str[i] = '\0';
+	return (str);
 }

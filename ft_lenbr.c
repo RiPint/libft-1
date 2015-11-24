@@ -6,23 +6,23 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:36:24 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/23 19:36:27 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/24 17:31:06 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_lenbr(int n)
 {
-  int i;
+	int i;
 
-  i = 0;
-  if (n == 0)
-    return (1);
-  if (n < 0)
-    i++;
-  while (n != 0)
-    {
-      i++;
-      n /= 10;
-    }
-  return (i);
+	i = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+		i++;
+	while (n != 0)
+	{
+		i++;
+		n /= 10;
+	}
+	return (i);
 }

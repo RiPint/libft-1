@@ -6,18 +6,18 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:45:50 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/23 19:45:53 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/24 17:37:07 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-  int i;
+	int i;
 
-  i = 0;
-  while (s1[i] == s2[i] && s1[i] && s2[i])
-    i++;
-  if (s1[i] != s2[i])
-    return (0);
-  return (1);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] && s2[i])
+		i++;
+	if (s1[i] != s2[i])
+		return (0);
+	return (1);
 }
