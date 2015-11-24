@@ -13,31 +13,30 @@
 #include <string.h>
 #include "libft.h"
 
-char	*ft_strstr(const char *s1, const char *s2)
+char    *ft_strstr(const char *s1, const char *s2)
 {
   size_t i;
   size_t j;
-  char  *str;
-
-  str = ft_strdup(s1);
   i = 0;
   j = 0;
 
-  while (str[i])
+  if (s2[i] == '\0')
+    return ((char *)s1);
+  while (s1[i])
     {
-      if (str[i] == s2[j])
-        {
-          while (str[i] == s2[j] && s2[j])
-            {
-              i++;
-              j++;
-            }
-          if (s2[j] == '\0')
-	    return (str);
-          else
-            j = 0;
-        }
-      str++;
+      if (s1[i] == s2[j])
+	{
+          while (s1[i] == s2[j] && s1[i] && s2[j])
+	    {
+	      i++;
+	      j++;
+	    }
+	  if (s2[j] == '\0')
+	    return ((char *)&s1[i - ft_strlen(s2)]);
+	  j = 0;
+	}
+      else
+        i++;
     }
   return (NULL);
 }
