@@ -33,6 +33,7 @@ char    *ft_strstr(const char *s1, const char *s2)
 	    }
 	  if (s2[j] == '\0')
 	    return ((char *)&s1[i - ft_strlen(s2)]);
+	  i = i - j + 1;
 	  j = 0;
 	}
       else
