@@ -6,22 +6,22 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:37:16 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 17:32:13 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/24 18:08:08 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void    *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t i;
 
 	i = 0;
 	while (n--)
 	{
-		if (*(unsigned char *)s == (unsigned char) c)
+		if (*(unsigned char *)s == (unsigned char)c)
 			return ((void *)s);
-		if (*(unsigned char *)s != (unsigned char) c)
+		if (*(unsigned char *)s != (unsigned char)c)
 			s++;
 	}
 	return (NULL);

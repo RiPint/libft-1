@@ -6,18 +6,17 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 14:20:17 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 17:25:53 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/24 18:09:22 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <string.h>
 
 int	ft_atoi(const char *str)
 {
-	size_t i;
-	int sign;
-	int result;
+	size_t	i;
+	int		sign;
+	int		result;
 
 	result = 0;
 	sign = 1;

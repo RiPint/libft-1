@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:49:39 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 17:40:30 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/24 17:50:56 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	char *str;
-	size_t j;
+	size_t	i;
+	char	*str;
+	size_t	j;
 
 	j = start;
 	i = 0;

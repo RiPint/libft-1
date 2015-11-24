@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:49:54 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 17:40:41 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/24 17:51:15 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t i;
-	size_t j;
-	size_t k;
-	char *str;
+	size_t		i;
+	size_t		j;
+	size_t		k;
+	char		*str;
 
 	k = 0;
 	i = 0;

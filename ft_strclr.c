@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:44:22 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 17:34:39 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/24 18:05:30 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_strclr(char *str)
 {
-	str = ft_memset(str, 0 , ft_strlen(str));
+	str = ft_memset(str, 0, ft_strlen(str));
 }

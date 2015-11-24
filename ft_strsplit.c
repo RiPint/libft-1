@@ -17,11 +17,11 @@
 
 char	**ft_strsplit(char const *s, char c)
 {
-	size_t i;
-	size_t j;
-	size_t x;
-	size_t y;
-	char **str;
+	size_t	i;
+	size_t	j;
+	size_t	x;
+	size_t	y;
+	char	**str;
 
 	x = 0;
 	y = 0;
