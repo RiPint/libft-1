@@ -15,23 +15,18 @@
 
 char	*ft_itoa(int n)
 {
-	size_t i;
-	size_t j;
-	char *str;
+	size_t	i;
+	size_t	j;
+	char	*str;
 
 	j = 0;
-	i = 0;
 	if (!(str = (char *)malloc(sizeof(char) * ft_lenbr(n))))
 		return (NULL);
 	if (n == -2147483648)
 		return ("-2147483648");
+	i = (n < 0 ? -n : n);
 	if (n < 0)
-	{
-		i = -n;
 		str[j++] = '-';
-	}
-	else
-		i = n;
 	while (i)
 	{
 		if (n >= 0)

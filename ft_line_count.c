@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:36:42 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 17:31:17 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/25 18:31:41 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,16 @@ size_t	ft_line_count(char const *s, char c)
 		if (s[i] == c)
 		{
 			while (s[i] == c)
-				i++;
-			if (s[i] == '\0' && k == 0)
-				return (result);
+				if (s[++i] == '\0' && k == 0)
+					return (result);
 			result++;
 		}
 		else
 		{
 			k = 1;
-			if (s[i + 1] == '\0' && result == 0)
+			if (s[++i + 1] == '\0' && result == 0)
 				return (1);
-			i++;
 		}
 	}
-	if (result == 1)
-		return (result);
-	if (s[i - 1] == c && k == 1)
-		return (result - 1);
-	return (result);
+	return (s[i - 1] == c && k == 1 && result != 1 ? result - 1 : result);
 }
