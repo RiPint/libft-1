@@ -66,6 +66,12 @@ SRC = ft_atoi.c \
 	ft_strxdup.c \
 	ft_tolower.c \
 	ft_toupper.c \
+	ft_lstdelone.c \
+	ft_lstdel.c \
+	ft_lstiter.c \
+	ft_lstadd.c \
+	ft_lstmap.c \
+	ft_lstnew.c
 
 OBJ = $(SRC:.c=.o)
 CC = /usr/bin/gcc
