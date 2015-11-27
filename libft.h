@@ -38,7 +38,7 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 void				ft_putendl_fd(char const *s, int fd);
 int					ft_lenbr(int n);
-void				*ft_memset(void *mem, int c, size_t n);
+void				*ft_memset(void *b, int c, size_t n);
 char				*ft_strchr(const char *s, int c);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strncpy(char *dest, const char *src, size_t n);
