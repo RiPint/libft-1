@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 11:45:09 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/27 11:45:12 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/27 16:38:54 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-  t_list *list;
-  t_list *ret;
-  t_list *tmp;
+	t_list *list;
+	t_list *tmp;
+	t_list *ptr;
 
-  list = lst;
-  while (list)
-    {
-      if (!(tmp = (t_list *)malloc(sizeof(t_list))))
-	return (NULL);
-      tmp = f(list);
-      if (list)
-	ret->next = tmp;
-      else
-	ret = tmp;
-      ret = ret->next;
-      list = list->next;
-    }
-  return (tmp);
+	if (!lst || !(*f))
+		return (NULL);
+	ptr = f(lst);
+	tmp = ptr;
+	lst = lst->next;
+	while (lst)
+	{
+		list = f(lst);
+		tmp->next = list;
+		tmp = list;
+		lst = lst->next;
+	}
+	tmp->next = NULL;
+	return (ptr);
 }
