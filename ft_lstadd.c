@@ -1,15 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 11:43:38 by tiprata           #+#    #+#             */
+/*   Updated: 2015/11/27 11:44:43 by tiprata          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <string.h>
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-  t_list *nlist;
-  if (alst)
-    {
-      nlist = ft_lstnew((void const*)new->content, new->content_size);
-      nlist->next = *alst;
-      *alst = nlist;
-    }
-  else
-    nlist = ft_lstnew((void const*)(*alst)->content, (*alst)->content_size);
+	if (alst)
+	{
+		new->next = *alst;
+		*alst = new;
+	}
+	else
+		return ;
 }
