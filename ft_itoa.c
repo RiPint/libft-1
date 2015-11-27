@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:36:15 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 17:27:06 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/27 20:19:23 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_itoa(int n)
 	if (!(str = (char *)malloc(sizeof(char) * ft_lenbr(n))))
 		return (NULL);
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	i = (n < 0 ? -n : n);
 	if (n < 0)
 		str[j++] = '-';
