@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:40:44 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 18:06:07 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/28 13:33:04 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	cp_dst = dst;
 	cp = src;
-	cp_src = (char *)malloc(sizeof(char) * len);
+	cp_src = (char *)malloc(sizeof(char) * len + 1);
 	while (i < len)
 	{
 		cp_src[i] = cp[i];
@@ -35,6 +35,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		cp_dst[i] = cp_src[i];
 		i++;
 	}
-	free(cp_src);
-	return (dst);
+	return (cp_src);
 }

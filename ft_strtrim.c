@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:49:54 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 17:51:15 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/28 13:36:54 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strtrim(char const *s)
 	k = 0;
 	i = 0;
 	j = 0;
-	if (!(str = (char *)malloc(sizeof(char) * ft_strlen(s))))
+	if (!(str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
 		return (NULL);
 	if (s[i] == '\0')
 		return ("");
