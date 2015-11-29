@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:49:17 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/28 13:36:12 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/29 15:40:41 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,12 @@ char	**ft_strsplit(char const *s, char c)
 	x = 0;
 	y = 0;
 	i = 0;
+//	if (!(s))
+//		return (NULL);
 	j = ft_line_count(s, c);
 	if (!(str = (char **)malloc(sizeof(char *) * (j + 1))))
 		return (NULL);
+
 	while (i < j)
 	{
 		x = y;
@@ -36,8 +39,8 @@ char	**ft_strsplit(char const *s, char c)
 			y = x;
 		while (s[y] != c && s[y])
 			y++;
-		str[i] = ft_strxdup(s, x, y);
-		i++;
+		if ((str[i] = ft_strxdup(s, x, y)))
+			i++;
 		while (s[y] == c && s[y])
 			y++;
 	}

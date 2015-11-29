@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:46:15 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 17:37:25 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/29 15:21:16 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	unsigned int i;
 
 	i = 0;
+	if (!(s) || !(*f))
+		return ;
 	while (s[i])
 	{
 		f(i, &s[i]);

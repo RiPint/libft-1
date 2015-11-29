@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:49:39 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 17:50:56 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/29 15:18:26 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 
 	j = start;
 	i = 0;
+	if (!s)
+		return (NULL);
 	if (!(str = (char *)malloc(sizeof(char) * len)))
 		return (NULL);
 	while (start < len + j)

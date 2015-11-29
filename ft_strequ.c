@@ -6,15 +6,19 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:45:50 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 17:37:07 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/29 15:19:10 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 int	ft_strequ(char const *s1, char const *s2)
 {
 	int i;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (0);
 	while (s1[i] == s2[i] && s1[i] && s2[i])
 		i++;
 	if (s1[i] != s2[i])

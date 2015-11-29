@@ -6,7 +6,7 @@
 /*   By: tiprata <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:46:55 by tiprata           #+#    #+#             */
-/*   Updated: 2015/11/24 18:03:12 by tiprata          ###   ########.fr       */
+/*   Updated: 2015/11/29 15:17:45 by tiprata          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	size_t	i;
 
 	i = 0;
+	if (!(s))
+		return (NULL);
 	str = (char *)malloc(sizeof(char) * ft_strlen(s));
 	if (str)
 	{
